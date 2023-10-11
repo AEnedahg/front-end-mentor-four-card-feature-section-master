@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  /* color */
+  --clr-primary-red: hsl(0, 78%, 62%);
+  --clr-primary-cyan: hsl(180, 62%, 55%);
+  --clr-primary-orange: hsl(34, 97%, 64%);
+  --clr-primary-blue: hsl(212, 86%, 64%);
+  --clr-neutral-very-dark-blue: hsl(234, 12%, 34%);
+  --clr-neutral-grayish-blue: hsl(229, 6%, 66%);
+  --clr-neutral-very-light-gray: hsl(0, 0%, 98%);
+
+  /* font */
+  --ff-primary: 'Poppins', sans-serif;
+  --fw-extra-light: 200;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+}
+
+*, 
+*::after, 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+}
+
+.container {
+  width: 1440px;
+  height: 922px;
+  margin: 0 auto;
+  padding: 78px 135px 60px;
+  background-color: var(--clr-neutral-very-light-gray);
+}
+
+.container h1.heading-one {
+  text-align: center;
+  font-weight: var(--fw-extra-light);
+  font-size: 3.4rem;
+  color: var(--clr-neutral-very-dark-blue);
+}
+
+.container h1.heading-two {
+  text-align: center;
+  font-size: 3.4rem;
+  color: var(--clr-neutral-very-dark-blue);
+  margin-bottom: 7px;
+}
+
+.container > p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--clr-neutral-grayish-blue);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+}
+
+.cards {
+  height: 570px;
+  display: grid;
+  grid-template-columns: repeat(3, 354px);
+  row-gap: 20px;
+  column-gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 354px;
+  height: 247px;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.card > h3 {
+  font-size: 2rem;
+  color: var(--clr-neutral-very-dark-blue);
+  margin-bottom: 5px;
+}
+
+.card > p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: var(--clr-neutral-grayish-blue);
+  font-weight: var(--fw-regular);
+}
+
+.card > img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+}
+
+.supervisor-card {
+  border-top: 5px solid var(--clr-primary-cyan);
+  grid-row: span 2;
+  align-self: center;
+}
+
+.team-builder-card {
+  border-top: 5px solid var(--clr-primary-red);
+}
+
+.karma-card {
+  border-top: 5px solid var(--clr-primary-orange);
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.calculator-card {
+  border-top: 5px solid var(--clr-primary-red);
+  grid-column: 3 / 4;
+  grid-row: span 2;
+  align-self: center;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 80px 35px;
+    width: 375px;
+    height: 1600px;
+  }
+
+  .container > h1.heading-one {
+    font-size: 2.0rem;
+    font-weight: var(--fw-extra-light);
+    color: var(--clr-neutral-very-dark-blue);
+  }
+
+  .container > h1.heading-two {
+    font-size: 2.0rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-neutral-very-dark-blue);
+  }
+
+  .container > p {
+    font-size: 1.4rem;
+    color: var(--clr-neutral-grayish-blue);
+    font-weight: var(--fw-regular);
+    margin-top: 15px;
+  }
+  
+  .cards {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 250px;
+    grid-gap: 35px;
+    justify-content: center;
+    margin-top: 65px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 250px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .supervisor-card {
+    grid-column: 1;
+    grid-row: 1/ span 1;
+    border-top: 6px solid var(--clr-primary-cyan);
+  }
+  
+  .team-builder-card {
+    grid-column: 1 / span 1;
+    grid-row: 2/ span 1;
+    border-top: 6px solid var(--clr-primary-red);
+  }
+  
+  .karma-card {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    border-top: 6px solid var(--clr-primary-orange);
+  }
+  
+  .calculator-card {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    border-top: 6px solid var(--clr-primary-blue);
+  }
+
+  .card img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+  }
+
+  .card p {
+    font-size: 1.1rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-grayish-blue);
+  }
+
+}
